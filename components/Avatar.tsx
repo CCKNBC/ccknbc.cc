@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link, { type LinkProps } from 'next/link'
 
 import portraitImage from '~/assets/Portrait.png'
-import portraitAltImage from '~/assets/PortraitAlt.jpg'
+import portraitAltImage from '~/assets/PortraitAlt.png'
 
 function AvatarContainer({ className, ...props }: ComponentProps) {
   return (

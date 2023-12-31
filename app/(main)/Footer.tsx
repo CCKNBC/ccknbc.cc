@@ -121,9 +121,19 @@ export async function Footer() {
             </div>
             <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
               <p className="text-sm text-zinc-500/80 dark:text-zinc-400/80">
-                &copy; {new Date().getFullYear()} Cali Castle. 网站已开源：
+                &copy; {new Date().getFullYear()} CCKNBC. Fork 自：
                 <PeekabooLink href="https://github.com/CaliCastle/cali.so">
-                  GitHub
+                  cali.so
+                </PeekabooLink>
+              </p>
+              <p className="text-sm text-zinc-500/80 dark:text-zinc-400/80">
+                <PeekabooLink href="https://beian.miit.gov.cn/">
+                鄂ICP备2020019764号-1
+                </PeekabooLink>
+              </p>
+              <p className="text-sm text-zinc-500/80 dark:text-zinc-400/80">
+                <PeekabooLink href="https://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42088102000093">
+                鄂公网安备42088102000093号
                 </PeekabooLink>
               </p>
               <Links />
