@@ -1,0 +1,32 @@
+[
+  {
+    "source": "/twitter",
+    "destination": "https://x.com/ccknbc",
+    "permanent": true
+  },
+  {
+    "source": "/x",
+    "destination": "https://x.com/ccknbc",
+    "permanent": true
+  },
+  {
+    "source": "/youtube",
+    "destination": "https://youtube.com/@ccknbc",
+    "permanent": true
+  },
+  {
+    "source": "/tg",
+    "destination": "https://t.me/ccknbc_bot",
+    "permanent": true
+  },
+  {
+    "source": "/github",
+    "destination": "https://github.com/CCKNBC",
+    "permanent": true
+  },
+  {
+    "source": "/bilibili",
+    "destination": "https://space.bilibili.com/1404413254",
+    "permanent": true
+  }
+]

@@ -30,6 +30,7 @@ export const Post = z.object({
 })
 export type Post = z.infer<typeof Post>
 export type PostDetail = Post & {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   headings: any[]
   related?: Post[]
 }
@@ -60,6 +61,8 @@ export default defineType({
       name: 'categories',
       title: 'Categories',
       type: 'array',
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       of: [{ type: 'reference', to: { type: 'category' } }],
     }),
     defineField({
@@ -82,6 +85,8 @@ export default defineType({
       name: 'description',
       title: 'Description',
       type: 'text',
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       rows: 3,
       validation: (Rule) => Rule.required(),
     }),
@@ -93,6 +98,7 @@ export default defineType({
     defineField({
       name: 'readingTime',
       type: readingTimeType.name,
+      validation: (Rule) => Rule.required(),
       options: {
         source: 'body',
       },
@@ -115,6 +121,7 @@ export default defineType({
   initialValue: () => ({
     publishedAt: new Date().toISOString(),
     mood: 'neutral',
+    readingTime: 0,
   }),
 
   preview: {
