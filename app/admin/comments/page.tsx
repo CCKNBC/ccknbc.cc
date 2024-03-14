@@ -19,7 +19,7 @@ import { db } from '~/db'
 import { comments } from '~/db/schema'
 import { url } from '~/lib'
 import { truncate } from '~/lib/string'
-import { clientFetch } from '~/sanity/lib/client'
+import { client } from '~/sanity/lib/client'
 
 export default async function AdminCommentsPage() {
   const {
@@ -42,7 +42,7 @@ export default async function AdminCommentsPage() {
     .limit(15)
   // get unique post IDs from comments
   const postIds = [...new Set(latestComments.map((comment) => comment.postId))]
-  const posts = await clientFetch<
+  const posts = await client.fetch<
     { _id: string; title: string; slug: string }[]
   >(
     `*[_type == "post" && (_id in [${postIds
